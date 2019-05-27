@@ -17,8 +17,5 @@ int main()
     zaz.decGrade();
     zaz.decGrade();
     zaz.incGrade();
-
-    Bureaucrat tata = Bureaucrat("tata", 249);
-    std::cout << tata;
 	return 0;
 }
