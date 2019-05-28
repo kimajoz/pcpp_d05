@@ -2,7 +2,7 @@ UNAME := $(shell uname)
 
 NAME=bureaucrat
 SRC=	Bureaucrat.cpp \
-		AForm.cpp \
+		Form.cpp \
 		ShrubberyCreationForm.cpp \
 		PresidentialPardonForm.cpp \
 		RobotomyRequestForm.cpp \

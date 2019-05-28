@@ -4,11 +4,11 @@
 #include <string>
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "Form.hpp"
 
 class   RobotomyRequestForm;
 
-class 										RobotomyRequestForm : public AForm
+class 										RobotomyRequestForm : public Form
 {
 	private:
 		RobotomyRequestForm();

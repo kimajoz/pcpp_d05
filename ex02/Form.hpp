@@ -7,7 +7,7 @@
 
 class   Bureaucrat;
 
-class 										AForm
+class 										Form
 {
 	private:
 		std::string const      	    		_name;
@@ -18,11 +18,11 @@ class 										AForm
 		
 		
 	public:
-		AForm();
-		AForm( std::string const & name, int const grade, int const gradeexec );
-		virtual ~AForm();
-        AForm(AForm const & src);
-		AForm &    				    operator=( AForm const & rhs );
+		Form();
+		Form( std::string const & name, int const grade, int const gradeexec );
+		virtual ~Form();
+        Form(Form const & src);
+		Form &    				    operator=( Form const & rhs );
 		
 		class								GradeTooHighException : public std::exception
 		{
@@ -51,6 +51,6 @@ class 										AForm
 
 };
 
-std::ostream & 	operator<<( std::ostream & o, AForm const & i );
+std::ostream & 	operator<<( std::ostream & o, Form const & i );
 
 #endif

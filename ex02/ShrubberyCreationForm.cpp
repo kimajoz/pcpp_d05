@@ -1,11 +1,11 @@
 #include "ShrubberyCreationForm.hpp"
 #include "Bureaucrat.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm( ) : AForm("", 145, 137) {
+ShrubberyCreationForm::ShrubberyCreationForm( ) : Form("", 145, 137) {
 
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm(target, 145, 137) {
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form(target, 145, 137) {
 
 }
 
@@ -33,24 +33,28 @@ void                    writeASCIITreeFile(std::string name) {
     {
         std::cout << "filename not readable, please specify a filename with the good rights." << std::endl;
     }
- 
-out << "               ,@@@@@@@," << std::endl;
-out << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
-out << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o" << std::endl;
-out << "   ,%&\%&&%&&%,@@@\\@@@/@@@88\\88888/88'" << std::endl;
-out << "   %&&%&%&/%&&%@@\\@@/ /@@@88888\\88888'" << std::endl;
-out << "   %&&%/ %&%%&&@@\\ V /@@' `88\\8 `/88'" << std::endl;
-out << "   `&%\\ ` /%&'    |.|        \\ '|8'" << std::endl;
-out << "       |o|        | |         | |" << std::endl;
-out << "       |.|        | |         | |" << std::endl;
-out << "    \\/ ._\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
+    else
+    {
+        std::cout << "File \"" << name << "_shrubbery\" as been created in the current directory with ASCII trees inside." << std::endl;
 
-                //out << str;
-            out.close();
+        out << "               ,@@@@@@@," << std::endl;
+        out << "       ,,,.   ,@@@@@@/@@,  .oo8888o." << std::endl;
+        out << "    ,&%%&%&&%,@@@@@/@@@@@@,8888\\88/8o" << std::endl;
+        out << "   ,%&\%&&%&&%,@@@\\@@@/@@@88\\88888/88'" << std::endl;
+        out << "   %&&%&%&/%&&%@@\\@@/ /@@@88888\\88888'" << std::endl;
+        out << "   %&&%/ %&%%&&@@\\ V /@@' `88\\8 `/88'" << std::endl;
+        out << "   `&%\\ ` /%&'    |.|        \\ '|8'" << std::endl;
+        out << "       |o|        | |         | |" << std::endl;
+        out << "       |.|        | |         | |" << std::endl;
+        out << "    \\/ ._\\//_/__/  ,\\_//__\\/.  \\_//__/_" << std::endl;
+
+            //out << str;
+        out.close();
+    }
 }
 
 void                    ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 
-    AForm::checkSigned(executor);
+    Form::checkSigned(executor);
     writeASCIITreeFile(getName());
 }

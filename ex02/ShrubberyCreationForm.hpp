@@ -5,12 +5,12 @@
 #include <iostream>
 #include <ostream>
 #include <fstream>
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
 
 class   ShrubberyCreationForm;
 
-class 										ShrubberyCreationForm : public AForm
+class 										ShrubberyCreationForm : public Form
 {
 	private:
 		ShrubberyCreationForm();

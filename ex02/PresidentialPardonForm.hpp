@@ -4,11 +4,11 @@
 #include <string>
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "Form.hpp"
 
 class   PresidentialPardonForm;
 
-class 										PresidentialPardonForm : public AForm
+class 										PresidentialPardonForm : public Form
 {
 	private:
 		PresidentialPardonForm();

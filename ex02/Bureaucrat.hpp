@@ -4,7 +4,7 @@
 #include <string>
 #include <ostream>
 #include <iostream>
-#include "AForm.hpp"
+#include "Form.hpp"
 
 class 										Bureaucrat
 {
@@ -36,8 +36,8 @@ class 										Bureaucrat
 		void								incGrade();
 		void								decGrade();
 
-		void                 				signForm( AForm & src );
-		void                    			executeForm(AForm const & form);
+		void                 				signForm( Form & src );
+		void                    			executeForm(Form const & form);
 };
 
 std::ostream & 	operator<<( std::ostream & o, Bureaucrat const & i );
