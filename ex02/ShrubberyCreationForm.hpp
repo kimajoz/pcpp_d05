@@ -6,9 +6,8 @@
 #include <ostream>
 #include <fstream>
 #include "Form.hpp"
-#include "Bureaucrat.hpp"
 
-class   ShrubberyCreationForm;
+class   Bureaucrat;
 
 class 										ShrubberyCreationForm : public Form
 {

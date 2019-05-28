@@ -5,10 +5,9 @@
 #include <iostream>
 #include <time.h>       /* time */
 #include <random>
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-class   RobotomyRequestForm;
+class   Bureaucrat;
 
 class 										RobotomyRequestForm : public Form
 {

@@ -3,10 +3,9 @@
 
 #include <string>
 #include <iostream>
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-class   PresidentialPardonForm;
+class   Bureaucrat;
 
 class 										PresidentialPardonForm : public Form
 {
