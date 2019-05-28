@@ -7,10 +7,10 @@
 
 int main()
 {
-    Bureaucrat buro = Bureaucrat("buro", 51);
-    ShrubberyCreationForm shru = ShrubberyCreationForm("shru");
-    PresidentialPardonForm pre = PresidentialPardonForm("pre");
-    RobotomyRequestForm robot = RobotomyRequestForm("robot");
+    Bureaucrat buro("buro", 51);
+    ShrubberyCreationForm shru("shru");
+    PresidentialPardonForm pre("pre");
+    RobotomyRequestForm robot("robot");
 
     std::cout << buro <<std::endl;
     std::cout << shru <<std::endl;
@@ -18,7 +18,12 @@ int main()
     std::cout << robot <<std::endl;
 
     buro.executeForm(shru);
+    buro.signForm(shru);
+    buro.executeForm(shru);
+   
+    buro.signForm(pre);
     buro.executeForm(pre);
+
     buro.executeForm(robot);
 
     // -------------------------------------------------------------------------------------

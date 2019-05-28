@@ -91,12 +91,12 @@ const char * Form::GradeTooHighException::what () const throw ()
 const char * Form::NotSignedException::what () const throw ()
 {
 
-    return "ERROR: Form not signed because of too low grade compared to gradereq!";
+    return "ERROR: Form not signed or/and too low grade compared to gradereq !";
 }
 
 void                     Form::checkSigned(Bureaucrat const & executor) const {
     std::cout << executor.getName() << " - is Grade:" << executor.getGrade() << " < Grade Req: " << Form::getGradeReq() << " ? Currently signed: " << Form::getBool() << std::endl;
-    if (Form::getBool() == 1 || executor.getGrade() > this->getGradeReq())
+    if (Form::getBool() == 0 || executor.getGrade() > this->getGradeReq())
         throw NotSignedException();
-    std::cout << " => Allowed to sign form and actions" << std::endl;
+    std::cout << " => Allowed for actions" << std::endl;
 }
