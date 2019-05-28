@@ -26,6 +26,12 @@ int main()
 
     buro.executeForm(robot);
 
+    Bureaucrat bill("bill", 72);
+    ShrubberyCreationForm shrubberyCreation("Hey");
+    std::cout << std::endl;
+    std::cout << "test: bill try to execute form: \"";
+    std::cout << shrubberyCreation << "\""<< std::endl;
+
     // -------------------------------------------------------------------------------------
     /*try
     {

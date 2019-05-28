@@ -91,12 +91,20 @@ const char * Form::GradeTooHighException::what () const throw ()
 const char * Form::NotSignedException::what () const throw ()
 {
 
-    return "ERROR: Form not signed or/and too low grade compared to gradereq !";
+    return "ERROR: Form not signed or/and too low grade compared to grade exec !";
 }
 
+/*En gros tu as require exécution grade et require signing grade
+Je vois pas ce que tu comprends pas
+Un formulaire a un grade requis pour être signé et un grade requis pour être exécuté
+Un bureaucrate a un grade
+Si un bureaucrate veut signer un document le grade du bureaucrate doit être <= au grade requis pour *signer* le document
+Si un bureaucrate veut exécuter un document le grade du bureaucrate doit être <= au grade requis pour *exécuter* le document*/
+
 void                     Form::checkSigned(Bureaucrat const & executor) const {
-    std::cout << executor.getName() << " - is Grade:" << executor.getGrade() << " < Grade Req: " << Form::getGradeReq() << " ? Currently signed: " << Form::getBool() << std::endl;
-    if (Form::getBool() == 0 || executor.getGrade() > this->getGradeReq())
+
+    std::cout << executor.getName() << " - is Grade:" << executor.getGrade() << " < Grade Exec: " << Form::getGradeExec() << " ? Currently signed: " << Form::getBool() << std::endl;
+    if (Form::getBool() == 0 || executor.getGrade() > this->getGradeExec())
         throw NotSignedException();
     std::cout << " => Allowed for actions" << std::endl;
 }

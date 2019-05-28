@@ -140,4 +140,7 @@ void                    Bureaucrat::executeForm(Form const & form) {
     catch(const Form::NotSignedException& e) {
         std::cout << e.what() << std::endl;
     }
+    catch(const Form::GradeTooLowException& e) {
+        std::cerr << this->_name << " cannot sign " << form.getName() << " because the required grade is " << form.getGradeExec() << std::endl;
+    }
 }
