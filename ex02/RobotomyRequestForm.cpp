@@ -2,11 +2,12 @@
 #include "Bureaucrat.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm( ) : Form("", 72, 45) {
-
+    
+    srand (time(NULL));
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, 72, 45) {
-
+    srand (time(NULL));
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src) {
@@ -35,9 +36,8 @@ int                         RobotomyRequestForm::randNumb(int r) const {
 
 void                        RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 
-
         Form::checkSigned(executor);
-        std::cout << " Glung glung glung !!!" << std::endl;
+        std::cout << "Glung glung glung !!!" << std::endl;
         if (randNumb(2) == 0)
             std::cout << executor.getName() << "has been robotomized successfully" << std::endl;
         else

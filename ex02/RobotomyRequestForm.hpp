@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+#include <time.h>       /* time */
+#include <random>
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
