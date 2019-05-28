@@ -12,6 +12,11 @@ Bureaucrat::Bureaucrat( std::string const & name, int grade ) : _name(name) {
     try
     {
         std::cout << "Bureaucrat Constructor called" << " - " << name << " created !" << std::endl;
+        if (grade < 1)
+        {
+            std::cout << "grade " << grade << " too low => set to default 150." << std::endl;
+            this->_grade = 150;
+        }
         Bureaucrat::setGrade(grade);
     }
     catch(const Bureaucrat::GradeTooHighException& e) {
@@ -57,7 +62,7 @@ std::ostream & 	operator<<( std::ostream & o, Bureaucrat const & i ) {
 }
 
 void                 	Bureaucrat::setGrade( int n ) {
-
+    
     if (n > 150)
         throw GradeTooLowException();
     else if (n < 1)
